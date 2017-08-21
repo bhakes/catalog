@@ -65,7 +65,8 @@ class Item(Base):
         """Return object data in easily serializeable format"""
         return {
         'name' : self.name,
-        'description' : self.category,
+        'description' : self.description,
+        'category_id' : self.category_id,
             }
 
 engine = create_engine('sqlite:///catalog.db')
